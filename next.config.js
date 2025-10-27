@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   // Disable server components warnings for transformers
   experimental: {
@@ -6,6 +8,11 @@ const nextConfig = {
   },
   
   webpack: (config, { isServer, webpack }) => {
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, './src'),
+    };
     
     // Ignore .node files entirely
     config.module = config.module || {};
