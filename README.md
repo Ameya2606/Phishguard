@@ -166,9 +166,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **shadcn/ui** for beautiful UI components
 - **Next.js** team for the amazing framework
 
-## 📞 Support
-
-For support, please open an issue in the GitHub repository or contact [your-email@example.com]
 
 ## 🔒 Security
 
