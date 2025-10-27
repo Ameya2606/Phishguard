@@ -4,13 +4,15 @@ services:
     env: node
     region: oregon
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
-        value: 18.17.0
+        value: 20.18.0
       - key: NODE_ENV
         value: production
+      - key: NPM_CONFIG_LEGACY_PEER_DEPS
+        value: "true"
     # Auto-deploy on push
     autoDeploy: true
     # Health check path
